@@ -76,10 +76,23 @@ fs.writeFile('./dist/generatedREADME.md', fileContent, (err) => {
 };
 
 // function to prompt questions and store user inputs
-const init = () => {}
-
-
+const init = () => {
+        return inquirer.prompt(questions)
+        .then(readmeData => {
+            return readmeData;
+        })
+    };
 
 // Function call to initialize app
 init()
+    .then(readmeData => {
+        console.log(readmeData);
+        return generateMarkdown(readmeData);
+      })
+      .then(pageMD => {
+        return writeFile(pageMD);
+      })
+      .catch(err => {
+        console.log(err);
+      });
  
