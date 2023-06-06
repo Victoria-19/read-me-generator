@@ -65,8 +65,15 @@ const questions = [
 
 // function to write README file
 
-const writeFile = (fileContent) => {}
-    
+const writeFile = (fileContent) => {
+fs.writeFile('./dist/generatedREADME.md', fileContent, (err) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    console.log('File created!');
+  });
+};
 
 // function to prompt questions and store user inputs
 const init = () => {}
