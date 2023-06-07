@@ -34,7 +34,8 @@
    ## [Installation](#table-of-contents)
 
    You will need to install inquirer as well as well as json then its as simple as following the code and creating your own professional ReadMe
-      ## [Tests](#table-of-contents)
+     
+   ## [Tests](#table-of-contents)
   
    You can test the project by just copying the code and or if your creating you own just make sure you have a line of questions to ask the user
   
